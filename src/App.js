@@ -15,11 +15,11 @@ class App extends Component {
     console.log(response);
     let data = { response: response };
     if (response.accessToken) {
-      console.setState({ login: true });
+      this.setState({ login: true });
     } else {
       alert("facebook login error");
       data["login"] = false;
-      console.setState({ login: false });
+      this.setState({ login: false });
     }
   };
   validate = (fname, lname, email, password) => {
